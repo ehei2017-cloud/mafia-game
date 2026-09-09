@@ -5,7 +5,7 @@ const { Server } = require('socket.io');
 const app = express();
 const server = app.listen(process.env.PORT || 3000, () => console.log('Mafia running on port 3000'));
 const io = new Server(server);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(.(__dirname,')));
 
 const rooms = new Map();
 const code = () => Math.random().toString(36).slice(2, 7).toUpperCase();
